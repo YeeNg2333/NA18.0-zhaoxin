@@ -1,20 +1,16 @@
 "use client"
 
-import Navigation from "../components/navigation"
-import ThirdSection from "../components/third-section"
 import { Button } from "../components/ui/button"
 import Link from "next/link"
 
 export default function HomePage() {
   return (
-    <div style={{ backgroundColor: "var(--theme-primary)" }} className="text-stone-300 font-light">
-      {/* First Section - Hero (75vh) */}
-      <section className="h-[75vh] flex flex-col p-8">
-        <Navigation currentPage="home" />
-
+    <div>
+      {/* First Section - Hero */}
+      <section className="h-[60vh] flex flex-col p-8">
         <main className="flex-grow flex items-start justify-start w-full pt-16">
           <div className="max-w-4xl">
-            <h1 className="text-5xl md:text-6xl font-light leading-tight">
+            <h1 className="text-5xl md:text-6xl font-light leading-tight text-[var(--theme-secondary)]">
               网络管理技术伙伴，专注网站建设、品牌推广与技术创新。
             </h1>
           </div>
@@ -23,8 +19,8 @@ export default function HomePage() {
 
       {/* Second Section - About Us (with secondary theme color background) */}
       <section
-        id="about"
         className="min-h-[100vh] p-8 flex items-start"
+        id="about"
         style={{ backgroundColor: "var(--theme-secondary)", color: "var(--theme-primary)" }}
       >
         <div className="max-w-6xl w-full flex items-stretch justify-between min-h-[100vh]">
@@ -42,15 +38,13 @@ export default function HomePage() {
                 size="lg"
                 className="rounded-full px-8 h-11 text-base w-fit bg-[var(--theme-primary)] text-[var(--theme-secondary)] hover:bg-white hover:text-[var(--theme-primary)] transition-colors"
               >
-                <Link href="/#departments">部门介绍</Link>
+                <Link href="/departments">部门介绍</Link>
               </Button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Third Section - Using shared component */}
-      <ThirdSection currentPage="home" />
     </div>
   )
 }

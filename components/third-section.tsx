@@ -1,22 +1,15 @@
 "use client"
 
 import React from "react"
-import Navigation from "./navigation"
 import TextLineRotator from "./text-line-rotator"
 
-interface ThirdSectionProps {
-  currentPage?: "home" | "join"
-}
-
-export default function ThirdSection({ currentPage = "home" }: ThirdSectionProps) {
+export default function ThirdSection() {
   const showWeChatQR = () => {
     alert("微信二维码功能待实现")
   }
 
   return (
     <section className="min-h-screen flex flex-col justify-between p-8">
-      <Navigation currentPage={currentPage} />
-
       <main className="flex-grow flex items-center justify-start w-full">
         <div className="w-1/2 relative">
           <TextLineRotator

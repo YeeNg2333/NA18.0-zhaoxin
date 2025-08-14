@@ -2,8 +2,6 @@
 
 import type React from "react"
 import { useState } from "react"
-import Navigation from "../../components/navigation"
-import ThirdSection from "../../components/third-section"
 
 export default function JoinPage() {
   const [formData, setFormData] = useState({
@@ -58,11 +56,9 @@ export default function JoinPage() {
   }
 
   return (
-    <div style={{ backgroundColor: "var(--theme-primary)" }} className="text-stone-300 font-light">
+    <div>
       <div className="min-h-screen">
         <section className="h-[75vh] flex flex-col justify-between p-8 relative">
-          <Navigation currentPage="join" />
-
           <main className="flex-grow flex items-center justify-center w-full">
             <div className="max-w-4xl text-center">
               <h1 className="text-6xl font-light leading-tight mb-8">
@@ -258,8 +254,6 @@ export default function JoinPage() {
           </div>
         </section>
 
-        {/* Third Section - Using shared component */}
-        <ThirdSection currentPage="join" />
       </div>
     </div>
   )

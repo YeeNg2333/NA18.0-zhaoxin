@@ -58,10 +58,10 @@ export default function JoinPage() {
   return (
     <div>
       <div className="min-h-screen">
-        <section className="h-[60vh] flex flex-col justify-between p-8 relative">
-          <main className="flex-grow flex items-center justify-center w-full">
-            <div className="max-w-4xl text-center">
-              <h1 className="text-6xl font-light leading-tight mb-8" style={{ color: "var(--theme-secondary)" }}>
+        <section className="h-[60vh] flex flex-col p-8 relative">
+          <main className="flex-grow flex items-start justify-start w-full pt-16">
+            <div className="max-w-4xl">
+              <h1 className="text-5xl md:text-6xl font-light leading-tight" style={{ color: "var(--theme-secondary)" }}>
                 无论你有清晰的目标还是初步的想法，
                 <br />
                 我们都在这里帮助你实现梦想。
@@ -81,17 +81,17 @@ export default function JoinPage() {
         </section>
 
         <section
-          className="h-[100vh] flex items-start justify-center py-8"
+          className="min-h-[100vh] p-10 flex items-start"
           style={{ backgroundColor: "var(--theme-secondary)" }}
         >
-          <div className="w-full max-w-6xl mx-auto px-4 md:px-6 py-6 flex items-start">
-            <div className="w-1/3 flex items-start justify-start pt-4">
-              <h2 className="text-4xl font-bold -ml-4 md:-ml-8 lg:-ml-10" style={{ color: "var(--theme-primary)" }}>
+          <div className="max-w-7xl w-full flex items-stretch justify-between min-h-[100vh]">
+            <div className="w-1/3 pr-12">
+              <h2 className="text-5xl font-bold" style={{ color: "var(--theme-primary)" }}>
                 申请加入
               </h2>
             </div>
 
-            <div className="w-2/3 pl-8">
+            <div className="w-2/3 pl-12 flex flex-col justify-between">
               <form className="w-full" onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>

@@ -25,7 +25,7 @@ export default function HomePage() {
       >
         <div className="max-w-6xl w-full flex items-stretch justify-between min-h-[100vh]">
           <div className="w-1/3 pr-12">
-            <h2 className="text-6xl font-bold">关于我们</h2>
+            <h2 className="text-5xl font-bold">关于我们</h2>
           </div>
           <div className="w-2/3 pl-12 flex flex-col justify-between">
             <p className="text-2xl md:text-3xl font-light leading-relaxed">

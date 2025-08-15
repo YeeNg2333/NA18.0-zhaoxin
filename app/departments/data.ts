@@ -5,6 +5,7 @@ export type Department = {
   details: string[]; // 详情页 4-5 句
   gradient?: string; // 占位封面渐变
   imageSrc?: string; // 可选封面图
+  images?: string[]; // 详情页图片，多张按一列向下排列
 };
 
 export const departments: Department[] = [

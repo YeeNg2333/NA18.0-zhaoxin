@@ -31,7 +31,7 @@ export default function Navigation() {
             e.currentTarget.style.backgroundColor = isHome ? "var(--theme-secondary)" : "transparent"
             e.currentTarget.style.color = isHome ? "var(--theme-primary)" : "var(--theme-secondary)"
           }}
-          href="/#about"
+          href="/"
         >
           关于我们
         </Link>

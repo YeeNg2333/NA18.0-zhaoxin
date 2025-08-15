@@ -58,10 +58,10 @@ export default function JoinPage() {
   return (
     <div>
       <div className="min-h-screen">
-        <section className="h-[75vh] flex flex-col justify-between p-8 relative">
+        <section className="h-[60vh] flex flex-col justify-between p-8 relative">
           <main className="flex-grow flex items-center justify-center w-full">
             <div className="max-w-4xl text-center">
-              <h1 className="text-6xl font-light leading-tight mb-8">
+              <h1 className="text-6xl font-light leading-tight mb-8" style={{ color: "var(--theme-secondary)" }}>
                 无论你有清晰的目标还是初步的想法，
                 <br />
                 我们都在这里帮助你实现梦想。
@@ -84,9 +84,9 @@ export default function JoinPage() {
           className="h-[100vh] flex items-start justify-center py-8"
           style={{ backgroundColor: "var(--theme-secondary)" }}
         >
-          <div className="w-full max-w-6xl mx-auto p-6 flex items-start">
+          <div className="w-full max-w-6xl mx-auto px-4 md:px-6 py-6 flex items-start">
             <div className="w-1/3 flex items-start justify-start pt-4">
-              <h2 className="text-3xl font-light" style={{ color: "var(--theme-primary)" }}>
+              <h2 className="text-4xl font-bold -ml-4 md:-ml-8 lg:-ml-10" style={{ color: "var(--theme-primary)" }}>
                 申请加入
               </h2>
             </div>
@@ -95,7 +95,7 @@ export default function JoinPage() {
               <form className="w-full" onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
-                    <label className="block mb-2 text-sm font-medium" style={{ color: "var(--theme-primary)" }}>
+                    <label className="block mb-2 text-base md:text-lg font-semibold" style={{ color: "var(--theme-primary)" }}>
                       姓名
                     </label>
                     <input
@@ -109,7 +109,7 @@ export default function JoinPage() {
                     />
                   </div>
                   <div>
-                    <label className="block mb-2 text-sm font-medium" style={{ color: "var(--theme-primary)" }}>
+                    <label className="block mb-2 text-base md:text-lg font-semibold" style={{ color: "var(--theme-primary)" }}>
                       专业
                     </label>
                     <input
@@ -126,7 +126,7 @@ export default function JoinPage() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
                   <div>
-                    <label className="block mb-2 text-sm font-medium" style={{ color: "var(--theme-primary)" }}>
+                    <label className="block mb-2 text-base md:text-lg font-semibold" style={{ color: "var(--theme-primary)" }}>
                       年级
                     </label>
                     <select
@@ -145,7 +145,7 @@ export default function JoinPage() {
                     </select>
                   </div>
                   <div>
-                    <label className="block mb-2 text-sm font-medium" style={{ color: "var(--theme-primary)" }}>
+                    <label className="block mb-2 text-base md:text-lg font-semibold" style={{ color: "var(--theme-primary)" }}>
                       性别
                     </label>
                     <div className="flex space-x-6 pt-2">
@@ -177,7 +177,7 @@ export default function JoinPage() {
                               )}
                             </div>
                           </div>
-                          <span className="ml-2 text-sm" style={{ color: "var(--theme-primary)" }}>
+                          <span className="ml-2 text-base font-medium" style={{ color: "var(--theme-primary)" }}>
                             {gender}
                           </span>
                         </label>
@@ -187,7 +187,7 @@ export default function JoinPage() {
                 </div>
 
                 <div className="mt-4">
-                  <label className="block mb-2 text-sm font-medium" style={{ color: "var(--theme-primary)" }}>
+                  <label className="block mb-2 text-base md:text-lg font-semibold" style={{ color: "var(--theme-primary)" }}>
                     手机号
                   </label>
                   <input
@@ -202,7 +202,7 @@ export default function JoinPage() {
                 </div>
 
                 <div className="mt-4">
-                  <label className="block mb-2 text-sm font-medium" style={{ color: "var(--theme-primary)" }}>
+                  <label className="block mb-2 text-base md:text-lg font-semibold" style={{ color: "var(--theme-primary)" }}>
                     感兴趣的部门 <span className="text-xs text-stone-600">(可多选，最多选择2个)</span>
                   </label>
                   <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
@@ -232,7 +232,7 @@ export default function JoinPage() {
                             )}
                           </div>
                         </div>
-                        <span className="ml-2 text-sm" style={{ color: "var(--theme-primary)" }}>
+                        <span className="ml-2 text-base font-medium" style={{ color: "var(--theme-primary)" }}>
                           {department}
                         </span>
                       </label>

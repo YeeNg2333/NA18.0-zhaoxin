@@ -1,20 +1,28 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Roboto } from "next/font/google"
+import type { Viewport } from "next"
+import { Noto_Sans_SC } from "next/font/google"
 import "./globals.css"
 import Navigation from "../components/navigation"
 import ThirdSection from "../components/third-section"
 
-const roboto = Roboto({
+const notoSansSC = Noto_Sans_SC({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-roboto",
-  weight: ["300", "400", "500", "700"],
+  variable: "--font-noto-sans-sc",
+  weight: ["400", "500"],
 })
 
 export const metadata: Metadata = {
-  title: "NA 网络管理工作站 招新",
+  title: "NA18.0 2025招新",
   description: "NA协会招新官网 - 网络技术创新未来领航",
+}
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  viewportFit: "cover",
 }
 
 export default function RootLayout({
@@ -23,7 +31,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="zh-CN" className={`${roboto.variable} antialiased`}>
+    <html lang="zh-CN" className={`${notoSansSC.variable} antialiased`}>
       <body className="font-sans">
         <div style={{ backgroundColor: "var(--theme-primary)" }} className="text-stone-300 font-light min-h-screen">
           {/* 全站统一头部 */}

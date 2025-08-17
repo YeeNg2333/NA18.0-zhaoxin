@@ -15,30 +15,22 @@ export type DepartmentCardProps = {
 
 export default function DepartmentCard({ title, intro, href, gradient, imageSrc }: DepartmentCardProps) {
   return (
-    <article className="group relative flex flex-col overflow-hidden transition-transform hover:-translate-y-0.5">
+    <Link href={href} className="group relative flex flex-col overflow-hidden transition-transform hover:-translate-y-0.5" aria-label={`了解${title}`}>
       <CardMedia gradient={gradient} imageSrc={imageSrc} />
 
       <div className="flex flex-1 flex-col gap-3 pt-4">
-        <h3 className="text-lg font-semibold tracking-tight" style={{ color: "var(--theme-secondary)" }}>{title}</h3>
-        <p className="text-lg leading-relaxed line-clamp-2 opacity-80" style={{ color: "var(--theme-secondary)" }}>{intro}</p>
+        <h3 className="text-base sm:text-lg md:text-xl font-semibold tracking-tight" style={{ color: "var(--theme-secondary)" }}>{title}</h3>
+        <p className="text-base sm:text-lg leading-relaxed line-clamp-2 opacity-60" style={{ color: "var(--theme-secondary)" }}>{intro}</p>
         <div className="mt-auto pt-2">
-          <Link
-            href={href}
-            className="inline-flex items-center text-xs font-medium transition-opacity"
-            aria-label={`了解${title}`}
+          <span
+            className="inline-flex items-center text-sm md:text-xs font-medium transition-opacity group-hover:opacity-70"
             style={{ color: "var(--theme-secondary)" }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.opacity = "0.7"
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.opacity = "1"
-            }}
           >
             了解 {title} →
-          </Link>
+          </span>
         </div>
       </div>
-    </article>
+    </Link>
   );
 }
 

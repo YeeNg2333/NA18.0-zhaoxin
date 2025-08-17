@@ -115,8 +115,8 @@
   --color-sidebar-ring: var(--sidebar-ring);
   --color-theme-primary: var(--theme-primary);
   --color-theme-secondary: var(--theme-secondary);
-  --font-sans: var(--font-roboto);
-  --font-mono: var(--font-roboto);
+  --font-sans: var(--font-noto-sans-sc);
+  --font-mono: var(--font-noto-sans-sc);
 }
 
 @layer base {
@@ -125,8 +125,10 @@
   }
   body {
     @apply bg-background text-foreground;
-    /* Updated font family to Roboto */
-    font-family: "Roboto", sans-serif;
+    /* 使用自托管的 Noto Sans SC 作为全站主字体 */
+    font-family: var(--font-noto-sans-sc), sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     /* Use theme variables instead of hardcoded black/white */
     color: var(--theme-secondary);
   }

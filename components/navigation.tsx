@@ -6,16 +6,16 @@ import { usePathname } from "next/navigation"
 export default function Navigation() {
   const pathname = usePathname()
   const isHome = pathname === "/"
-  const isDepartments = pathname.startsWith("/departments")
+  const isDepartments = pathname === "/departments"
   const isJoin = pathname === "/join"
   return (
-    <header className="w-full flex justify-between items-center">
-      <Link href="/" className="text-lg font-medium transition-colors" style={{ color: "var(--theme-secondary)" }}>
+    <header className="w-full flex flex-row items-start gap-0">
+      <Link href="/" className="text-sm sm:text-base font-semibold leading-tight transition-colors" style={{ color: "var(--theme-secondary)" }}>
         Network Administration
       </Link>
-      <nav className="flex items-center space-x-2">
+      <nav className="flex items-start flex-nowrap gap-1 ml-auto justify-end">
         <Link
-          className="px-4 py-2 border rounded-sm font-semibold transition-colors"
+          className="px-2 md:px-3 py-1 border rounded-sm font-normal text-xs md:text-sm transition-colors"
           style={{
             borderColor: "var(--theme-secondary)",
             backgroundColor: isHome ? "var(--theme-secondary)" : "transparent",
@@ -36,7 +36,7 @@ export default function Navigation() {
           关于我们
         </Link>
         <Link
-          className="px-4 py-2 border rounded-sm font-semibold transition-colors"
+          className="px-2 md:px-3 py-1 border rounded-sm font-normal text-xs md:text-sm transition-colors"
           style={{
             borderColor: "var(--theme-secondary)",
             backgroundColor: isDepartments ? "var(--theme-secondary)" : "transparent",
@@ -55,7 +55,7 @@ export default function Navigation() {
           部门介绍
         </Link>
         <Link
-          className={`px-4 py-2 border rounded-sm font-semibold transition-colors`}
+          className={`px-2 md:px-3 py-1 border rounded-sm font-normal text-xs md:text-sm transition-colors`}
           style={{
             borderColor: "var(--theme-secondary)",
             backgroundColor: isJoin ? "var(--theme-secondary)" : "transparent",

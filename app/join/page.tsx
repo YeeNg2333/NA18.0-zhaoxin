@@ -140,7 +140,7 @@ export default function JoinPage() {
                       学号
                     </label>
                     <input
-                      type="text"
+                      type="tel"
                       name="stuid"
                       value={formData.stuid}
                       onChange={handleInputChange}

@@ -6,6 +6,7 @@ import { useState } from "react"
 export default function JoinPage() {
   const [formData, setFormData] = useState({
     name: "",
+    stuid: "",
     major: "",
     grade: "",
     gender: "",
@@ -48,7 +49,7 @@ export default function JoinPage() {
     e.preventDefault()
     if (submitting) return
 
-    const { name, major, grade, gender, phone, departments } = formData
+    const { name, stuid, major, grade, gender, phone, departments } = formData
 
     if (!name || !major || !grade || !gender || !phone || departments.length === 0) {
       alert("请填写所有必填项目")
@@ -72,7 +73,7 @@ export default function JoinPage() {
 
       alert("申请提交成功！")
       // 可按需重置表单
-      setFormData({ name: "", major: "", grade: "", gender: "", phone: "", departments: [] })
+      setFormData({ name: "", stuid: "",major: "", grade: "", gender: "", phone: "", departments: [] })
     } catch (err) {
       console.error(err)
       alert("网络或服务器异常，请稍后重试")
@@ -131,6 +132,20 @@ export default function JoinPage() {
                       onChange={handleInputChange}
                       className="w-full p-3 bg-stone-400/30 text-[var(--theme-primary)] rounded-md placeholder:text-stone-500/70 focus:ring-2 focus:ring-stone-500/50 focus:outline-none transition-all duration-300 ease-in-out font-normal text-base"
                       placeholder="请输入姓名"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label className="block mb-2 text-sm sm:text-base md:text-lg font-normal text-[var(--theme-primary)]">
+                      学号
+                    </label>
+                    <input
+                      type="text"
+                      name="name"
+                      value={formData.stuid}
+                      onChange={handleInputChange}
+                      className="w-full p-3 bg-stone-400/30 text-[var(--theme-primary)] rounded-md placeholder:text-stone-500/70 focus:ring-2 focus:ring-stone-500/50 focus:outline-none transition-all duration-300 ease-in-out font-normal text-base"
+                      placeholder="请输入学号"
                       required
                     />
                   </div>

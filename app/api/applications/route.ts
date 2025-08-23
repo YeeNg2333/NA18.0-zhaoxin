@@ -9,8 +9,9 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ message: "请求体无效" }, { status: 400 })
     }
 
-    const { name, major, grade, gender, phone, departments } = body as {
+    const { name, stuid, major, grade, gender, phone, departments } = body as {
       name?: string
+      stuid?: string
       major?: string
       grade?: string
       gender?: string
@@ -29,6 +30,7 @@ export async function POST(req: NextRequest) {
 
     const record = {
       name,
+      stuid,
       major,
       grade,
       gender,

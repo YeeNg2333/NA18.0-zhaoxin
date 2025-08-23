@@ -15,7 +15,7 @@ export default function Navigation() {
       </Link>
       <nav className="flex items-start flex-nowrap gap-1 ml-auto justify-end">
         <Link
-          className="px-2 md:px-3 py-1 border rounded-sm font-normal text-xs md:text-sm transition-colors"
+          className="px-2 md:px-3 py-1 border rounded-sm font-normal text-xs md:text-sm transition-colors whitespace-nowrap"
           style={{
             borderColor: "var(--theme-secondary)",
             backgroundColor: isHome ? "var(--theme-secondary)" : "transparent",
@@ -36,7 +36,7 @@ export default function Navigation() {
           关于我们
         </Link>
         <Link
-          className="px-2 md:px-3 py-1 border rounded-sm font-normal text-xs md:text-sm transition-colors"
+          className="px-2 md:px-3 py-1 border rounded-sm font-normal text-xs md:text-sm transition-colors whitespace-nowrap"
           style={{
             borderColor: "var(--theme-secondary)",
             backgroundColor: isDepartments ? "var(--theme-secondary)" : "transparent",
@@ -55,7 +55,7 @@ export default function Navigation() {
           部门介绍
         </Link>
         <Link
-          className={`px-2 md:px-3 py-1 border rounded-sm font-normal text-xs md:text-sm transition-colors`}
+          className={`px-2 md:px-3 py-1 border rounded-sm font-normal text-xs md:text-sm transition-colors whitespace-nowrap`}
           style={{
             borderColor: "var(--theme-secondary)",
             backgroundColor: isJoin ? "var(--theme-secondary)" : "transparent",

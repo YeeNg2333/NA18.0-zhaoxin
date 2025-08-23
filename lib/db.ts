@@ -2,6 +2,7 @@ import { randomUUID } from "crypto"
 
 export type ApplicationRecord = {
   name: string
+  stuid: string
   major: string
   grade: string
   gender: string
@@ -16,8 +17,8 @@ export type ApplicationRecord = {
  * 保存报名信息到数据库。
  * 说明：
  * - 默认（未配置 DB_PROVIDER）下，不会实际写数据库，仅在服务端控制台输出并返回一个占位 ID，方便端到端联通性测试。
- * - 当设置 DB_PROVIDER=postgres|mysql|sqlite 时，将按需动态导入驱动，仅在被调用到该分支时才需要安装对应依赖。
- * - 表结构请参考根目录 DATABASE_SETUP.txt。
+ * - 当设置 DB_PROVIDER=postgres|mysql|sqlite 时，将按需动态导入驱动，仅在被调用到该分支时才需要安装对应依赖。（其实都要装好）
+ * - 表结构请参考根目录 DATABASE_SETUP.txt。（目前仅对postgres进行修改结构--增加学号。
  */
 export async function saveApplication(record: ApplicationRecord): Promise<string> {
   const id = randomUUID()
@@ -30,7 +31,7 @@ export async function saveApplication(record: ApplicationRecord): Promise<string
   }
 
   if (provider === "postgres") {
-    // 需要依赖：pg
+    // 需要依赖：pg，仅对此数据库进行增改 学号 的行
     const { Client } = await import("pg").catch(() => ({ Client: null as any }))
     if (!Client) throw new Error("未安装依赖 pg，请参考 DATABASE_SETUP.txt")
 
@@ -50,6 +51,7 @@ export async function saveApplication(record: ApplicationRecord): Promise<string
         CREATE TABLE IF NOT EXISTS applications (
           id UUID PRIMARY KEY,
           name TEXT NOT NULL,
+          stuid TEXT NOT NULL,
           major TEXT NOT NULL,
           grade TEXT NOT NULL,
           gender TEXT NOT NULL,
@@ -63,11 +65,12 @@ export async function saveApplication(record: ApplicationRecord): Promise<string
 
       await client.query(
         `INSERT INTO applications (
-          id, name, major, grade, gender, phone, departments, created_at, ip, ua
-        ) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)`,
+          id, name, stuid, major, grade, gender, phone, departments, created_at, ip, ua
+        ) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)`,
         [
           id,
           record.name,
+          record.stuid,
           record.major,
           record.grade,
           record.gender,

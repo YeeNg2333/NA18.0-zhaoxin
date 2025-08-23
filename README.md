@@ -2,7 +2,7 @@
  
 # NA 新生招新网站使用说明
 
-> 本项目基于 Next.js（App Router）+ Tailwind CSS 构建，用于 NA 部门介绍与“加入我们/申请加入”在线收集信息。
+> 本项目fork自CurtisYan学长的仓库，基于 Next.js（App Router）+ Tailwind CSS 构建，用于 NA 部门介绍与“加入我们/申请加入”在线收集信息。
 >
 > 近期已完成的样式优化：
 > - 输入框底色更柔和、占位符颜色优化、单选/复选动画与主题色统一
@@ -166,6 +166,7 @@ npm i better-sqlite3
 ```
 
 ### 表结构（统一规范，驱动层可自动创建表；如需手动初始化可参考下方 DDL）
+> 实际上这个表有点问题，缺了学号
 - 表名：`applications`
 - 字段：
   - `id`           主键（UUID/CHAR(36)/TEXT）

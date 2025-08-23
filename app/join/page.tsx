@@ -141,7 +141,7 @@ export default function JoinPage() {
                     </label>
                     <input
                       type="text"
-                      name="name"
+                      name="stuid"
                       value={formData.stuid}
                       onChange={handleInputChange}
                       className="w-full p-3 bg-stone-400/30 text-[var(--theme-primary)] rounded-md placeholder:text-stone-500/70 focus:ring-2 focus:ring-stone-500/50 focus:outline-none transition-all duration-300 ease-in-out font-normal text-base"

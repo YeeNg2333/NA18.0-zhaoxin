@@ -29,7 +29,7 @@ export default function HomePage() {
           </div>
           <div className="w-full md:w-2/3 md:pl-12 flex flex-col justify-between">
             <p className="text-2xl sm:text-2xl md:text-3xl font-light leading-relaxed">
-              我们与学生、企业和教育机构合作，致力于通过真实的技术体验、创新项目和专业服务来塑造网络管理文化
+              连接未来，服务每一位！ 作为学院的技术力量，[网络管理工作站] 承担着为全院师生提供稳定、高效的网络服务的使命。 我们不仅仅是技术专家，更是学生的朋友， 无论你遇到任何网络问题，我们都在这里为你服务。
             </p>
             <div className="pt-8 mt-auto hidden md:block">
               <Button

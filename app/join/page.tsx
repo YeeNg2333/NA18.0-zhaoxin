@@ -51,7 +51,7 @@ export default function JoinPage() {
 
     const { name, stuid, major, grade, gender, phone, departments } = formData
 
-    if (!name || !major || !grade || !gender || !phone || departments.length === 0) {
+    if (!name || !stuid || !major || !grade || !gender || !phone || departments.length === 0) {
       alert("请填写所有必填项目")
       return
     }

@@ -209,3 +209,8 @@ html {
 }
 
 /* Removed page-level snap classes */
+
+.anti-moire {
+  image-rendering: smooth; /* 减少摩尔纹，保留边缘清晰度 */
+  filter: blur(0.5px);
+}

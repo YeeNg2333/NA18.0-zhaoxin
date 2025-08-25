@@ -19,7 +19,7 @@ export async function POST(req: NextRequest) {
       departments?: string[]
     }
 
-    if (!name || !major || !grade || !gender || !phone || !Array.isArray(departments) || departments.length === 0) {
+    if (!name || !stuid || !major || !grade || !gender || !phone || !Array.isArray(departments) || departments.length === 0) {
       return NextResponse.json({ message: "请填写所有必填项目" }, { status: 400 })
     }
 

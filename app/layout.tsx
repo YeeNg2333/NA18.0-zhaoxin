@@ -16,6 +16,9 @@ const notoSansSC = Noto_Sans_SC({
 export const metadata: Metadata = {
   title: "NA18.0 2025招新",
   description: "NA协会招新官网 - 网络技术创新未来领航",
+  icons: {
+    icon: "/favicon.ico",
+  },
 }
 
 export const viewport: Viewport = {

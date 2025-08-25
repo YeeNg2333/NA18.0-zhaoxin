@@ -166,7 +166,7 @@ export default function JoinPage() {
                       required
                     />
                   </div>
-                
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 mt-4">
                   <div>
                     <label className="block mb-2 text-sm sm:text-base md:text-lg font-normal text-[var(--theme-primary)]">

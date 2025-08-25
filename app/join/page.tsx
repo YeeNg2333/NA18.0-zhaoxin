@@ -135,20 +135,7 @@ export default function JoinPage() {
                       required
                     />
                   </div>
-                  <div>
-                    <label className="block mb-2 text-sm sm:text-base md:text-lg font-normal text-[var(--theme-primary)]">
-                      学号
-                    </label>
-                    <input
-                      type="tel"
-                      name="stuid"
-                      value={formData.stuid}
-                      onChange={handleInputChange}
-                      className="w-full p-3 bg-stone-400/30 text-[var(--theme-primary)] rounded-md placeholder:text-stone-500/70 focus:ring-2 focus:ring-stone-500/50 focus:outline-none transition-all duration-300 ease-in-out font-normal text-base"
-                      placeholder="请输入学号"
-                      required
-                    />
-                  </div>
+
                   <div>
                     <label className="block mb-2 text-sm sm:text-base md:text-lg font-normal text-[var(--theme-primary)]">
                       专业
@@ -165,6 +152,21 @@ export default function JoinPage() {
                   </div>
                 </div>
 
+                <div>
+                    <label className="block mb-2 text-sm sm:text-base md:text-lg font-normal text-[var(--theme-primary)]">
+                      学号
+                    </label>
+                    <input
+                      type="tel"
+                      name="stuid"
+                      value={formData.stuid}
+                      onChange={handleInputChange}
+                      className="w-full p-3 bg-stone-400/30 text-[var(--theme-primary)] rounded-md placeholder:text-stone-500/70 focus:ring-2 focus:ring-stone-500/50 focus:outline-none transition-all duration-300 ease-in-out font-normal text-base"
+                      placeholder="请输入学号"
+                      required
+                    />
+                  </div>
+                
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 mt-4">
                   <div>
                     <label className="block mb-2 text-sm sm:text-base md:text-lg font-normal text-[var(--theme-primary)]">

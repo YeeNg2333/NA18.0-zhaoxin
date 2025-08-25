@@ -11,7 +11,7 @@ export default function HomePage() {
         <main className="flex-grow flex items-start justify-start w-full pt-8 md:pt-16">
           <div className="max-w-4xl pr-2">
             <h1 className="text-5xl sm:text-5xl md:text-6xl font-light leading-tight text-[var(--theme-secondary)]">
-              网络管理工作站招新
+              网络管理<br className="mobile-wrap"/>工作站招新
             </h1>
           </div>
         </main>
@@ -25,11 +25,11 @@ export default function HomePage() {
       >
         <div className="max-w-6xl w-full flex flex-col md:flex-row items-stretch justify-start md:justify-between gap-6 md:gap-0 min-h-[70vh]">
           <div className="w-full md:w-1/3 md:pr-12">
-            <h2 className="text-4xl sm:text-4xl md:text-5xl ">关于我们</h2>
+            <h2 className="text-4xl sm:text-4xl md:text-5xl whitespace-nowrap">关于我们</h2>
           </div>
           <div className="w-full md:w-2/3 md:pl-12 flex flex-col justify-between">
             <p className="text-2xl sm:text-2xl md:text-3xl font-light leading-relaxed">
-              连接未来，服务每一位！ 作为学院的技术力量，[网络管理工作站] 承担着为全院师生提供稳定、高效的网络服务的使命。 我们不仅仅是技术专家，更是学生的朋友， 无论你遇到任何网络问题，我们都在这里为你服务。
+              连接未来，服务每一位！ 作为学院的技术力量，<span className="whitespace-nowrap font-medium">[网络管理工作站]</span>承担着为全院师生提供稳定、高效的网络服务的使命。 我们不仅仅是技术专家，更是学生的朋友， 无论你遇到任何网络问题，我们都在这里为你服务。
             </p>
             <div className="pt-8 mt-auto hidden md:block">
               <Button

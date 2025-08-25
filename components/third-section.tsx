@@ -5,6 +5,7 @@ import TextLineRotator from "./text-line-rotator"
 import Navigation from "./navigation"
 import Image from "next/image"
 
+
 export default function ThirdSection() {
   const [showQR, setShowQR] = useState(false)
   const [animIn, setAnimIn] = useState(false)
@@ -197,10 +198,10 @@ export default function ThirdSection() {
         </div>
         <div ref={imgWrapRef} className="hidden md:block md:w-1/2 md:h-[360px] lg:h-[460px] relative mt-4 md:mt-0">
           <Image
-            src="/images/ui/na_img.png"
+            src="/images/ui/na.svg"
             alt="装饰图形"
             fill
-            className="object-contain"
+            className="object-contain anti-moire"
             priority
           />
         </div>

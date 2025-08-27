@@ -3,6 +3,7 @@ export type Department = {
   title: string;
   intro: string; // 列表页 2 句话
   details: string[]; // 详情页 4-5 句
+  description?: string // 图二
   gradient?: string; // 占位封面渐变
   imageSrc?: string; // 可选封面图
   images?: string[]; // 详情页图片，多张按一列向下排列

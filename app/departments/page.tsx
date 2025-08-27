@@ -26,7 +26,7 @@ export default function DepartmentsPage() {
               intro={dept.intro}
               href={`/departments/${dept.slug}`}
               gradient={dept.gradient}
-              imageSrc="/images/uploads/tech_party.jpeg"
+              imageSrc={dept.imageSrc}
             />
           ))}
         </div>

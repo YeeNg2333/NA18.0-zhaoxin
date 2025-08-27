@@ -22,19 +22,28 @@ export const departments: Department[] = [
       "在复杂问题面前，保持好奇与务实，是我们的共识。",
     ],
     gradient: "from-primary/25 via-primary/10 to-background",
+    imageSrc: "/images/uploads/tech_party.jpeg"
   },
   {
     slug: "secretary",
     title: "秘书部",
     intro:
-      "我们负责统筹协调与流程管理，保障组织高效运转。以细致与专业为基础，打造顺畅协作体验。",
+      "秘书部是中心的枢纽部门，连接着宣传、外联、资源等各部门，是一个融合管理运营与温馨社群的独特团体。",
     details: [
-      "秘书部负责日常运营支持、会议管理与跨部门协同，保证信息传递准确及时。",
-      "我们优化流程、规范文档，提升组织的执行效率与可追溯性。",
-      "在关键节点提供节奏把控与资源调度，降低沟通成本。",
-      "以服务意识与责任心为核心价值，构建稳定可靠的支撑体系。",
+      "我们不仅是保障校园网络稳定运行的幕后力量，更是汇聚创意与友爱的大家庭。",
+      "我们以“交友”为导向，坚信轻松愉快的氛围能激发最高效率。部门活动丰富多元： ",
+      "・文化休闲：组织集体观影，共享感动；",
+      "・温情时刻：举办生日会，传递家一般的温暖；",
+        "・户外挑战：夜爬白云山、素质拓展，锤炼意志也加深友谊；",
+        "・才华舞台：参与晚会筹办，展示才艺、锻炼表达。",
+        "在这里，你将收获： ",
+      "・管理与领导能力：从策划到执行，全面激发潜力；",
+      "・沟通与协调能力：在跨部门协作中大幅提升；",
+      "・深厚同窗情谊：结识志同道合、并肩成长的伙伴；",
+      "・难忘大学回忆：每一次欢笑都是璀璨篇章。",
     ],
     gradient: "from-secondary/25 via-secondary/10 to-background",
+    imageSrc: "/images/uploads/sec.jpg"
   },
   {
     slug: "publicity",
@@ -48,6 +57,7 @@ export const departments: Department[] = [
       "与业务与产品密切协作，形成可持续的内容资产库。",
     ],
     gradient: "from-primary/20 via-secondary/10 to-background",
+    imageSrc: "/images/uploads/pro.jpg"
   },
   {
     slug: "outreach",
@@ -61,6 +71,7 @@ export const departments: Department[] = [
       "注重结果与体验的平衡，推动合作落地并复盘沉淀。",
     ],
     gradient: "from-secondary/20 via-primary/10 to-background",
+    imageSrc: "/images/uploads/com1.jpg"
   },
   {
     slug: "resources",

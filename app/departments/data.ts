@@ -72,7 +72,7 @@ export const departments: Department[] = [
       "注重结果与体验的平衡，推动合作落地并复盘沉淀。",
     ],
     gradient: "from-secondary/20 via-primary/10 to-background",
-    imageSrc: "/images/uploads/com1.jpg"
+    imageSrc: "/images/uploads/con1.jpg"
   },
   {
     slug: "resources",

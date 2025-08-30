@@ -42,25 +42,25 @@ export default function DepartmentDetailPage({ params }: { params: { slug: strin
 
           {/* 示例图片 */}
           <div className="mt-4 md:mt-6">
-            <img src="/images/uploads/tech_party.jpeg" alt="部门活动图片 1" className="w-full object-cover" />
+            <img src={dept.imageSrc} alt="部门活动图片 1" className="w-full object-cover" />
           </div>
 
           {/* 第二个图片和描述 */}
           <div className="mt-12 md:mt-6 grid grid-cols-1 md:grid-cols-5 gap-1 md:gap-8 items-start">
             {/* 左侧小图片 */}
             <div className="md:col-span-4">
-              <img src="/images/uploads/tech_party.jpeg" alt="部门活动图片 2" className="w-full object-cover" />
+              <img src={dept.images ? dept.images[0] : dept.imageSrc} alt="部门活动图片 2" className="w-full object-cover" />
             </div>
             {/* 右侧文字介绍 */}
             <div className="md:col-span-1 mt-0 md:mt-0">
               <p className="text-sm text-stone-400/90 leading-relaxed">
-                这是一段关于图片的详细描述，旨在补充说明图片的背景故事、技术细节或其所传达的核心信息。通过这段文字，观者可以更深入地理解画面的内涵与价值。
+                {dept.title}<p/>{dept.description}
               </p>
             </div>
           </div>
 
           {/* 下方：图片一列纵向排列 */}
-          {dept.images && dept.images.length > 0 && (
+          {dept.images && dept.images.length > 1 && (
             <div className="mt-4 md:mt-6 grid grid-cols-1 gap-y-12 sm:gap-y-14 md:gap-y-16">
               {dept.images.map((src, idx) => (
                 <div key={idx}>
